@@ -1,0 +1,37 @@
+/* Features */
+.features-container {
+    position: relative;
+}
+
+.features-container::before {
+    position: absolute;
+    bottom: -32px;
+    left: -136px;
+    z-index: -1;
+    width: 224px;
+    height: 224px;
+    background-image: url('../images/dots-decor.png');
+    content: '';
+}
+
+.features-container::after {
+    position: absolute;
+    bottom: -32px;
+    right: -136px;
+    z-index: -1;
+    width: 600px;
+    height: 160px;
+    background-image: var(--gradient-decor);
+    transform: rotate(180deg);
+    content: '';
+}
+
+.features-list {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.features-item {
+    flex-basis: calc((100% - 88px) / 3);
+}
